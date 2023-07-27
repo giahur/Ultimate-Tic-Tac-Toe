@@ -1,0 +1,170 @@
+body {
+  background-color: #2d3035;
+}
+
+/* Heading */
+h1 {
+  color: #ba71d1;
+  text-shadow: 0px 0px 20px #171a1c;
+  font-family: 'Chewy', sans-serif;
+  text-align: center;
+  font-size: 4em;
+  margin: 0rem;
+}
+.title {
+  margin: 10rem auto 2rem auto;
+  font-size: 6em;
+}
+
+/* Buttons */
+.button {
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #ba71d1;
+  color: #faf3f0;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  margin: 1.5rem auto;
+  display: block;
+  font-family: 'Sniglet', sans-serif;
+  text-align: center;
+}
+.button:hover {
+  box-shadow: 0px 0px 20px #171a1c;
+}
+.button:active {
+  background-color: #9d5fb0;
+}
+.red {
+  background-color: #ff515c;
+  width: 9rem;
+}
+.red:active {
+  background-color: #c23e46;
+}
+.blue {
+  background-color: #71acff;
+  width: 9rem;
+}
+.blue:active {
+  background-color: #5b89c9;
+}
+.smallButton {
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #ba71d1;
+  color: #faf3f0;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 1rem auto auto 1rem;
+  display: block;
+  font-family: 'Sniglet', sans-serif;
+  width: 2.5rem;
+}
+
+/* Page layouts */
+.layout {
+  align-items: center;
+  justify-content: center;
+  display: grid;
+}
+p {
+  margin: 1rem;
+  font-family: 'Sniglet', sans-serif;
+  text-align: left;
+  font-size: 1.5em;
+  color: #e8ddd8;
+  width: 50rem;
+  margin-left: 10rem;
+}
+
+/* Small Board */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+table td {
+  background-color: #1e2225;
+  box-shadow: 0px 0px 7px #171a1c;
+  border-radius: 10%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Cherry Bomb One', sans-serif;
+  line-height: 1rem;
+}
+td:hover {
+  box-shadow: 0px 0px 15px #171a1c;
+}
+
+/* Big Board */
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.big {
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+}
+
+/* Turns and Wins */
+.x {
+  color: #71acff;
+}
+.o {
+  color: #ff515c;
+}
+.oSmallWin {
+  background-color: #ff515c;
+  border-radius: 0.5rem;
+}
+.xSmallWin {
+  background-color: #71acff;
+  border-radius: 0.5rem;
+}
+.tieSmallWin {
+  background-color: #ba71d1;
+  border-radius: 0.5rem;
+}
+
+/* Turn Board */
+.turnBoard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 10rem;
+  font-size: 1.5em;
+  background-color: #1e2225;
+  margin: 2rem auto;
+  box-shadow: 0px 0px 8px #171a1c;
+  border-radius: 0.5rem;
+  font-family: 'Cherry Bomb One';
+}
+.turn {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}
+.xTurn {
+  color: #71acff;
+  border-bottom: 5px solid #71acff;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.oTurn {
+  color: #ff515c;
+  border-bottom: 5px solid #ff515c;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+.inactive {
+  border-bottom: 5px solid transparent;
+}
