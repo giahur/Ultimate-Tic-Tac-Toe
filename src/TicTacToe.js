@@ -11,11 +11,12 @@ const TicTacToe = ({
   nextMove,
   setNextMove,
   number,
+  mark,
+  setMark,
 }) => {
   const [cells, setCells] = useState(Array(9).fill(''));
   const [inactive, setInactive] = useState(false);
   const [bigMark, setBigMark] = useState('');
-  //const [moveMark, setMoveMark] = useState('');
   const winConditions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -60,11 +61,13 @@ const TicTacToe = ({
 
   // Checks move index, sets correct board active
   const checkNextMove = () => {
-    if (!nextMove || nextMove === number || ticTacToes[nextMove] !== '') {
-      //setMoveMark(turn + 'Turn');
+    if (
+      nextMove === 'null' ||
+      nextMove === number ||
+      ticTacToes[nextMove] !== ''
+    ) {
       return true;
     }
-    //setMoveMark('');
     return false;
   };
 
@@ -78,6 +81,7 @@ const TicTacToe = ({
     switchTurn();
     checkSmallWinner(newCells);
     setNextMove(num);
+    setMark(num);
     setCells(newCells);
   };
 
@@ -91,10 +95,18 @@ const TicTacToe = ({
     );
   };
 
+  function nextMark() {
+    if (mark === number || (mark === null && ticTacToes[number] === '')) {
+      if (ticTacToes[number] !== '') {
+        setMark(null);
+      } else {
+        return 'nextMark';
+      }
+    }
+  }
+
   return (
-    <div className={`container ${bigMark}`}>
-      {' '}
-      {/*${moveMark}`}>*/}
+    <div className={`container ${bigMark} ` + nextMark()}>
       <table>
         <tbody>
           <tr>

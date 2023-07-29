@@ -168,3 +168,7 @@ td:hover {
 .inactive {
   border-bottom: 5px solid transparent;
 }
+.nextMark {
+  background-color: #e8ddd8;
+  border-radius: 0.5rem;
+}

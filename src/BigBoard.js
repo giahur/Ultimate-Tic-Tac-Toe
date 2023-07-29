@@ -10,6 +10,7 @@ const BigBoard = () => {
   const [ticTacToes, setTicTacToes] = useState(Array(9).fill(''));
   const [bigWinner, setBigWinner] = useState(null);
   const [nextMove, setNextMove] = useState(null);
+  const [mark, setMark] = useState(null);
   const winConditions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -89,6 +90,8 @@ const BigBoard = () => {
         setNextMove={setNextMove}
         key={i}
         number={i}
+        mark={mark}
+        setMark={setMark}
       />
     );
   }
